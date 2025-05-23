@@ -4,9 +4,9 @@ import { ThemeProvider, CssBaseline } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import theme from './theme';
 
-// ✅ Imported so far
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About'; // ✅ NEW
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Hero />} />
-          {/* More pages will be added here next */}
+          <Route path="/about" element={<About />} /> {/* ✅ NEW */}
         </Routes>
       </Router>
     </ThemeProvider>
