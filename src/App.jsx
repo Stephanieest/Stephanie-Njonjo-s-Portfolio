@@ -1,17 +1,23 @@
+// src/App.jsx
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import theme from './theme';
-import Navbar from './components/Navbar'; // ✅ just added
+
+// ✅ Imported so far
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Navbar /> {/* ✅ now visible */}
+        <Navbar />
+
         <Routes>
-          {/* Pages will be added here one by one */}
+          <Route path="/" element={<Hero />} />
+          {/* More pages will be added here next */}
         </Routes>
       </Router>
     </ThemeProvider>
